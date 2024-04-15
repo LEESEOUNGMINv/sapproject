@@ -1,0 +1,19 @@
+<!-- app/View/Login.view.xml -->
+
+<mvc:View
+    controllerName="sap.ad.so.Controller.Login"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m">
+    <App>
+        <Page title="Login">
+        <content>
+            <!-- Login Form -->
+            <Input placeholder="Username" value="{loginModel>/username}" />
+            <Input placeholder="Password" value="{loginModel>/password}" type="Password" />
+            <Button text="Login" press="onLogin" />
+            <Button text="Join" press="onSignUp" />
+        </content>
+        </Page>
+    </App>
+</mvc:View>

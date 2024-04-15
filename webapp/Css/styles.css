@@ -1,0 +1,11 @@
+/* app/Css/styles.css */
+
+.container {
+    margin: 20px auto;
+    width: 300px;
+    text-align: center;
+}
+
+input {
+    margin-bottom: 10px;
+}

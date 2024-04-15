@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <title>index</title>
+    <!-- CSS 파일 로드 -->
+    <link rel="stylesheet" type="text/css" href="Css/styles.css">
+</head>
+<body>
+    <div id="content"></div>
+
+    <!-- UI5 라이브러리 동적 로드 -->
+    <script>
+        // UI5 초기화 콜백 함수
+        function initUI5() {
+            // 모델 생성
+            var oModel = sap.ui.require("app/Model/UserModel");
+            sap.ui.getCore().setModel(oModel);
+
+            // 뷰 로드
+            var oView = sap.ui.xmlview({viewName: "sap.ad.so.View.Login"});
+            
+            // 뷰를 컨테이너에 추가
+            oView.placeAt("content");
+        }
+        
+        function initUI5() {
+            var oModel = sap.ui.require("app/Model/UserModel");
+            sap.ui.getCore().setModel(oModel);
+    
+            var oView = sap.ui.xmlview({viewName: "sap.ad.so.View.Login"});
+
+            oView.placeAt("content");
+        }
+
+        // UI5 라이브러리 동적 로드
+        var script = document.createElement('script');
+        script.src = 'https://openui5.hana.ondemand.com/resources/sap-ui-core.js';
+        script.id = 'sap-ui-bootstrap';
+        script.setAttribute('data-sap-ui-theme', 'sap_belize');
+        script.setAttribute('data-sap-ui-libs', 'sap.m');
+        script.setAttribute('data-sap-ui-resourceroots',' {"sap.ad.so": "./"} ' );
+        document.head.appendChild(script);
+
+        // UI5 초기화 콜백 함수 등록
+        script.onload = initUI5;
+    </script>
+</body>
+</html>
